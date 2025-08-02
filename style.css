@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#output {
+  width: 100%;
+  height: 120px;
+  font-size: 24px;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* ←列方向に10列 */
+  grid-auto-rows: 40px;
+  gap: 8px;
+}
+
+
+button.char-btn {
+  font-size: 18px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;       /* ボタン高さを統一 */
+  width: 100%;        /* グリッドセルにフィット */
+  box-sizing: border-box;
+}
+button.char-btn:hover {
+  background: #e0e0e0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -10px;
+}
+
+#delete-btn {
+  font-size: 18px;
+  padding: 8px 16px;
+  background: #ffdddd;
+  border: 1px solid #cc0000;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #660000;
+}
+
+#delete-btn:hover {
+  background: #ffbbbb;
+}
+
+#gaze-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+}
